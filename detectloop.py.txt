@@ -1,0 +1,25 @@
+def detectLoop(head):
+
+    #code here
+    
+	if head == None:
+
+        	return "False"
+    
+	else:
+        
+		prev = head
+        
+		curr = head
+        
+		while prev and curr and curr.next:
+            
+			prev= prev.next
+            
+			curr = curr.next.next
+            
+			if prev == curr:
+               
+				return "True"
+        
+		return "False"
